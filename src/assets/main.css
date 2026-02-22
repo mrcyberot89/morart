@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+@import '@fontsource/poller-one/400.css';
+
+
+@layer components {
+  .btn-join {
+    @apply bg-[#516FFF] text-[24px] py-[13px] px-[60px] rounded-4xl;
+  }
+}
+
+
+@theme {
+  --font-poller: 'font-family:"Poller One"';
+}
+
+@theme {
+  --font-dm: 'font-family: "DM Serif Text", serif';
+}
+@theme {
+  --font-playfair:'font-family: "Playfair", serif';
+}
+@layer components {
+  .bg-custom {
+    @apply bg-[#5b5b5b];
+  }
+}
