@@ -21,21 +21,13 @@ class LukisanController extends Controller
     {
         //
         $lukisan = Lukisan::all()->map(function ($lukisan) {
+            $lukisan->url_gambar = asset('storage/images/' . $lukisan->gambar);
             $lukisan->harga = $this->convertToRupiah($lukisan->harga);
             return $lukisan;
 
         });
         return response()->json([
-            $lukisan->map(function ($lukisan) {
-                return [
-                    'id' => $lukisan->id,
-                    'url_gambar' => asset('storage/images/' . $lukisan->gambar),
-                    'nama' => $lukisan->nama,
-                    'lebar' => $lukisan->lebar,
-                    'tinggi' => $lukisan->tinggi,
-                    'harga' => $lukisan->harga
-                ];
-            })
+            'lukisan' => $lukisan
 
         ]);
 
