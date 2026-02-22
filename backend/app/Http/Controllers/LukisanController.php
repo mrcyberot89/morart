@@ -26,8 +26,6 @@ class LukisanController extends Controller
 
         });
         return response()->json([
-            'lukisan' => $lukisan,
-
             $lukisan->map(function ($lukisan) {
                 return [
                     'id' => $lukisan->id,
