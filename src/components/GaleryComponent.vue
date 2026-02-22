@@ -20,11 +20,11 @@ const galeriArt = ref ([
 </script>
 
 <template>
-    <section class="h-screen container  mx-auto">
-        <div class="flex font-dm text-4xl justify-center my-6">
+    <section class="lg:h-screen container  mx-auto  mb-12">
+        <div class="flex font-dm lg:text-4xl text-2xl justify-center lg:my-6">
             <h1 class="text-white">Galeri MorArt</h1>
         </div>
-        <div class="grid grid-cols-4 grid-row-2 gap-6 bg-white rounded-2xl  p-7">
+        <div class="grid lg:grid-cols-4 lg:grid-row-2 lg:gap-6 grid-col-1 bg-white rounded-2xl  lg:p-7 p-3 gap-y-5">
             <div v-for="(img, index) in galeriArt" :key="index" class=" aspect-square rounded-2xl  overflow-hidden">
                 <img :src="img" alt="" class="object-cover h-full w-full">
             </div>

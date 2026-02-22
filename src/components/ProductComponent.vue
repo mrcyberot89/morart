@@ -20,7 +20,7 @@ const url = 'http://localhost:8000/api/lukisan'; //url api untuk mengambil data 
 const dataLukisan = async () => {
     try {
         const response = await axios.get(url,);
-        lukisan.value = response.data[0]; //menyimpan data dari api ke dalam variable lukisan
+        lukisan.value = response.data.lukisan; //menyimpan data dari api ke dalam variable lukisan
         console.log(lukisan);
     } catch (error) {
         console.log(error);
