@@ -40,3 +40,5 @@ Route::get('/test-env', function() {
         'app_env' => app()->environment()
     ]);
 });
+Route::get('/images-debug', [ImageController::class, 'index']);
+Route::post('/images-debug/upload', [ImageController::class, 'upload']);
