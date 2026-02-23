@@ -23,13 +23,13 @@ Route::get('/images/public', [ImageController::class, 'index']);
 // Protected routes (dengan auth)
 Route::middleware('auth:sanctum')->group(function () {
     // Image upload
-    // Route::post('/images/upload', [ImageController::class, 'upload']);
-    // Route::post('/images/upload-multiple', [ImageController::class, 'uploadMultiple']);
+    Route::post('/images/upload', [ImageController::class, 'upload']);
+    Route::post('/images/upload-multiple', [ImageController::class, 'uploadMultiple']);
     
-    // // Image management
-    // Route::get('/images', [ImageController::class, 'index']); // list my images
-    // Route::get('/images/{id}', [ImageController::class, 'show']);
-    // Route::delete('/images/{id}', [ImageController::class, 'destroy']);
+    // Image management
+    Route::get('/images', [ImageController::class, 'index']); // list my images
+    Route::get('/images/{id}', [ImageController::class, 'show']);
+    Route::delete('/images/{id}', [ImageController::class, 'destroy']);
 });
 
 // Test route untuk cek environment (opsional)
@@ -40,5 +40,3 @@ Route::get('/test-env', function() {
         'app_env' => app()->environment()
     ]);
 });
-Route::get('/images-debug', [ImageController::class, 'index']);
-Route::post('/images-debug/upload', [ImageController::class, 'upload']);
