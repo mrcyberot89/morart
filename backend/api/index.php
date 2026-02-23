@@ -3,3 +3,4 @@
 
 // Load file index.php dari folder public Laravel
 require __DIR__ . '/../public/index.php';
+require __DIR__ . '/../vendor/autoload.php';
