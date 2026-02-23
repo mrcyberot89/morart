@@ -1,17 +1,23 @@
 <script setup>
 import galery1 from '@/assets/one.jpeg'
 import galery2 from '@/assets/two.jpeg'
+import galery3 from '@/assets/three.jpeg'
+import galery4 from '@/assets/four.jpeg'
+import galery5 from '@/assets/five.jpeg'
+import galery6 from '@/assets/six.jpeg'
+import galery7 from '@/assets/seven.jpeg'
+import galery8 from '@/assets/eight.jpeg'
 import { ref } from 'vue';
 
 const galeriArt = ref ([
-    '/src/assets/one.jpeg',
-    '/src/assets/three.jpeg',
-    '/src/assets/two.jpeg',
-    '/src/assets/four.jpeg',
-    '/src/assets/five.jpeg',
-    '/src/assets/six.jpeg',
-    '/src/assets/seven.jpeg',
-    '/src/assets/eight.jpeg'
+    galery1,
+    galery2,
+    galery3,
+    galery4,
+    galery5,
+    galery6,
+    galery7,
+    galery8
 
 ])
 
