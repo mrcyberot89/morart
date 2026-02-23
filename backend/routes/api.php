@@ -13,3 +13,11 @@ Route::post('/lukisan/add_lukisan', [LukisanController::class, 'store']);
 Route::get('/lukisan/{id}', [LukisanController::class, 'show']);
 Route::put('/lukisan/{id}', [LukisanController::class, 'update']);
 Route::delete('/lukisan/{id}', [LukisanController::class, 'destroy']);
+
+Route::get('/test-env', function() {
+    return response()->json([
+        'imgurl_uid' => env('IMGURL_UID') ? 'ADA' : 'TIDAK ADA',
+        'imgurl_token' => env('IMGURL_TOKEN') ? 'ADA' : 'TIDAK ADA',
+        'app_env' => env('APP_ENV')
+    ]);
+});
