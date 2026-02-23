@@ -4,19 +4,12 @@ import images2 from '@/assets/two.jpeg'
 import axios from 'axios'
 import { ref, onMounted } from 'vue'
 
-import product1 from '@/assets/lukisan/product1.jpg'
-import product2 from '@/assets/lukisan/product2.jpg'
-import product3 from '@/assets/lukisan/product3.jpg'
-import product4 from '@/assets/lukisan/product4.jpg'
-import product5 from '@/assets/lukisan/product5.jpg'
-import product6 from '@/assets/lukisan/product6.jpg'
-import product7 from '@/assets/lukisan/product7.jpg'
-import product8 from '@/assets/lukisan/product8.jpg'
+
 
 
 const lukisan = ref(); //menampung data dari api
 
-const url = 'http://localhost:8000/api/lukisan'; //url api untuk mengambil data barang
+const url = 'https://morart-bfq2.vercel.app/api/api/lukisan'; //url api untuk mengambil data barang
 const dataLukisan = async () => {
     try {
         const response = await axios.get(url,);
