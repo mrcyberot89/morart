@@ -8,8 +8,8 @@ import { ref, onMounted } from 'vue'
 
 
 const lukisan = ref(); //menampung data dari api
-
-const url = 'https://morart-bfq2.vercel.app/api/api/lukisan'; //url api untuk mengambil data barang
+const url = 'https://s3.bmp.ovh/2026/02/24/8vm91Czq.jpg';
+//const url = 'https://morart-bfq2.vercel.app/api/api/lukisan'; //url api untuk mengambil data barang
 const dataLukisan = async () => {
     try {
         const response = await axios.get(url,);
@@ -29,7 +29,7 @@ onMounted(() => {
         <div class="grid grid-cols-4 gap-6 grid-rows-4">
             <div v-for="(item, index) in lukisan" :key="item.id" class="bg-black p-3 border rounded-2xl overflow-hidden h-auto">
                 <div class="h-[80%]  rounded-2xl overflow-hidden">
-                    <img :src="item.url_gambar" alt="" class="object-contain h-full w-full">
+                    <img :src="url" alt="" class="object-contain h-full w-full">
                 </div>
                 <div class=" text-white">
                     <p class="flex justify-center font-bold">{{ item.nama }}</p>
