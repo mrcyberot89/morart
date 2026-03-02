@@ -1,12 +1,13 @@
 {
   "version": 2,
   "functions": {
-    "runtime": "vercel-php@0.8.0"
+    "api/*.php": {
+      "runtime": "vercel-php@0.8.0"
+    }
   },
   "routes": [
     { "src": "/(.*)", "dest": "/api/index.php" }
   ],
   "outputDirectory": "public",
   "buildCommand": "composer install --no-dev --optimize-autoloader"
-  
 }   
