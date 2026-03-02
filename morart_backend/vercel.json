@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "builds": "composer install --no-dev --prefer-dist --optimize-autoloader && php artisan config:cache && php artisan route:cache && php artisan view:cache",
+  "build": "composer install --no-dev --prefer-dist --optimize-autoloader && php artisan config:cache && php artisan route:cache && php artisan view:cache",
   "routes": [
     { "src": "/(.*)", "dest": "/vercel/index.php" }
   ],
