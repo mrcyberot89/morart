@@ -7,6 +7,6 @@
     { "src": "/(.*)", "dest": "/api/index.php" }
   ],
   "outputDirectory": "public",
-  "buildCommand": "composer install --no-dev --optimize-autoloader",
+  "buildCommand": "composer install --no-dev --optimize-autoloader"
   
 }   
