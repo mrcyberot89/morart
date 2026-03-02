@@ -1,7 +1,7 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    { "src": "/(.*)", "dest": "/vercel/index.php" }
   ],
   "outputDirectory": "public"
 }   
