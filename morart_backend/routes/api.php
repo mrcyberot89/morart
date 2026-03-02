@@ -8,7 +8,7 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-
+Route::get('/photos', [PhotoController::class, 'index']);
 Route::post('/photos', [PhotoController::class, 'store']);
 
 Route::get('/test-cloudinary', function() {

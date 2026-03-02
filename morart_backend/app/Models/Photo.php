@@ -3,8 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Photo extends Model
 {
-    //
+    use HasFactory;
+    protected $table = 'photos';
+    //fillable dari tabel photos
+    protected $fillable = [
+        'id',
+        'title',
+        'image_url',
+        'image_public_id',
+    ];
 }
