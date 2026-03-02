@@ -8,5 +8,7 @@
   "routes": [
     { "src": "/(.*)", "dest": "/api/index.php" }
   ],
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+  "buildCommand": "composer install --no-dev --optimize-autoloader",
+  "engine": "nodejs18.x"
 }   
