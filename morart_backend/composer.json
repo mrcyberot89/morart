@@ -9,7 +9,6 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
         "aiven/aiven-laravel": "^1.0",
         "cloudinary-labs/cloudinary-laravel": "^3.0",
         "cloudinary/cloudinary_php": "^3.1",
@@ -81,6 +80,9 @@
         }
     },
     "config": {
+        "platform": {
+            "php": "8.3.0"
+        },
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
