@@ -8,7 +8,7 @@ import { ref, onMounted } from 'vue'
 
 
 const lukisan = ref(); //menampung data dari api
-const url = 'http://localhost:80/api/photos';
+const url = 'https://morart-j4md.vercel.app/apis/photos';
 //const url = 'https://morart-bfq2.vercel.app/api/api/lukisan'; //url api untuk mengambil data barang
 const dataLukisan = async () => {
     try {
